@@ -143,13 +143,13 @@ O protótipo das interfaces está sendo desenvolvido no **Figma**.
 
 ## 👥 Equipe
 
-| Integrante            | Função    |
-| --------------------- | --------- |
-| **Yuri Duarte**       | A definir |
-| **Karen Marroco**     | A definir |
-| **Miguel Giovannini** | A definir |
-| **Cleberson Felex**   | A definir |
-| **Matheus Basso**     | A definir |
+| Integrante            |
+| --------------------- |
+| **Yuri Duarte**       |
+| **Karen Marroco**     |
+| **Miguel Giovannini** |
+| **Cleberson Felex**   |
+| **Matheus Basso**     |
 
 ---
 
