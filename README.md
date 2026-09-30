@@ -150,13 +150,13 @@ O protótipo das interfaces está sendo desenvolvido no **Figma**.
 
 ## 👥 Equipe
 
-| Integrante            |
-| --------------------- |
-| **Yuri Duarte**       |
-| **Karen Marroco**     |
-| **Miguel Giovannini** |
-| **Cleberson Felex**   |
-| **Matheus Basso**     |
+| Integrante            | GitHub                                                                                                                              |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **Yuri Duarte**       | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat\&logo=github\&logoColor=white)](https://github.com/yuridkerber)    |
+| **Karen Marroco**     | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat\&logo=github\&logoColor=white)](https://github.com/KarenMarroco)   |
+| **Miguel Giovannini** | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat\&logo=github\&logoColor=white)](https://github.com/Giovannini150)  |
+| **Cleberson Felex**   | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat\&logo=github\&logoColor=white)](https://github.com/ClebersonFelex) |
+| **Matheus Basso**     | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat\&logo=github\&logoColor=white)](https://github.com/MTBasso)        |
 
 ---
 
