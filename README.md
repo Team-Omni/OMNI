@@ -1,14 +1,6 @@
 # 🤖 HelpBot
 
 [![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)](https://github.com/)
-[![Go](https://img.shields.io/badge/Go-00ADD8?logo=go\&logoColor=white)](https://go.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript\&logoColor=white)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/React-61DAFB?logo=react\&logoColor=black)](https://react.dev/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql\&logoColor=white)](https://www.postgresql.org/)
-[![Ollama](https://img.shields.io/badge/Ollama-Local%20LLM-black)](https://ollama.com/)
-[![PlantUML](https://img.shields.io/badge/PlantUML-Architecture-4B4B4B)](https://plantuml.com/)
-[![Git](https://img.shields.io/badge/Git-F05032?logo=git\&logoColor=white)](https://git-scm.com/)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github\&logoColor=white)](https://github.com/)
 
 > **Atendimento inteligente e triagem automatizada de chamados de TI.**
 
@@ -120,16 +112,31 @@ Interface destinada ao gerenciamento de **chamados, usuários, encaminhamentos e
 
 ## 🛠️ Tecnologias
 
-| Categoria               | Tecnologia          |
-| ----------------------- | ------------------- |
-| Backend                 | Go                  |
-| Chat                    | TypeScript          |
-| Painel administrativo   | React               |
-| Banco de dados          | PostgreSQL          |
-| Inteligência Artificial | KEV + Qwen + Ollama |
-| Comunicação             | REST + WebSocket    |
-| Arquitetura             | PlantUML + Mermaid  |
-| Versionamento           | Git + GitHub        |
+### Backend
+
+[![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge\&logo=go\&logoColor=white)](https://go.dev/)
+
+### Frontend
+
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge\&logo=typescript\&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge\&logo=react\&logoColor=black)](https://react.dev/)
+
+### Banco de Dados
+
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge\&logo=postgresql\&logoColor=white)](https://www.postgresql.org/)
+
+### Inteligência Artificial
+
+[![Ollama](https://img.shields.io/badge/Ollama-000000?style=for-the-badge\&logo=ollama\&logoColor=white)](https://ollama.com/)
+[![Qwen](https://img.shields.io/badge/Qwen-LLM-6E56CF?style=for-the-badge)](https://qwenlm.github.io/)
+
+### Arquitetura e Versionamento
+
+[![PlantUML](https://img.shields.io/badge/PlantUML-4B4B4B?style=for-the-badge)](https://plantuml.com/)
+[![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge\&logo=git\&logoColor=white)](https://git-scm.com/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/)
+
+> **Comunicação:** REST API e WebSocket.
 
 ---
 
@@ -137,7 +144,7 @@ Interface destinada ao gerenciamento de **chamados, usuários, encaminhamentos e
 
 O protótipo das interfaces está sendo desenvolvido no **Figma**.
 
-[![Figma](https://img.shields.io/badge/Prot%C3%B3tipo-Figma-F24E1E?logo=figma\&logoColor=white)](https://www.figma.com/proto/BQI0OtXmf1BAuWfHsxSYw0/modelo-PI-celular?node-id=11-16&p=f&t=uYYT4EW0nWHuNZm5-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1)
+[![Figma](https://img.shields.io/badge/Prot%C3%B3tipo-Figma-F24E1E?style=for-the-badge\&logo=figma\&logoColor=white)](https://www.figma.com/proto/BQI0OtXmf1BAuWfHsxSYw0/modelo-PI-celular?node-id=11-16&p=f&t=uYYT4EW0nWHuNZm5-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1)
 
 ---
 
