@@ -1,74 +1,155 @@
 # 🤖 HelpBot
 
+[![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)](https://github.com/)
+[![Go](https://img.shields.io/badge/Go-00ADD8?logo=go\&logoColor=white)](https://go.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript\&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-61DAFB?logo=react\&logoColor=black)](https://react.dev/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql\&logoColor=white)](https://www.postgresql.org/)
+[![Ollama](https://img.shields.io/badge/Ollama-Local%20LLM-black)](https://ollama.com/)
+[![PlantUML](https://img.shields.io/badge/PlantUML-Architecture-4B4B4B)](https://plantuml.com/)
+[![Git](https://img.shields.io/badge/Git-F05032?logo=git\&logoColor=white)](https://git-scm.com/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github\&logoColor=white)](https://github.com/)
+
 > **Atendimento inteligente e triagem automatizada de chamados de TI.**
 
-O **HelpBot** é uma solução de atendimento interno baseada em **Inteligência Artificial**, desenvolvida para auxiliar funcionários de empresas na resolução e direcionamento de solicitações relacionadas à Tecnologia da Informação.
+---
 
-A proposta é automatizar o **primeiro atendimento**, resolvendo dúvidas e problemas simples e, quando necessário, coletando informações e encaminhando o chamado para a **equipe ou setor responsável**.
+## 📌 Sobre
+
+O **HelpBot** é uma solução de atendimento interno baseada em **Inteligência Artificial**, desenvolvida para auxiliar funcionários na resolução e direcionamento de solicitações de TI.
+
+A solução automatiza o primeiro atendimento, orientando o usuário em problemas simples e, quando necessário, coletando informações, classificando a solicitação e encaminhando o chamado para a equipe responsável.
 
 ---
 
 ## 🎯 Objetivo
 
-Reduzir o volume de chamados simples, repetitivos ou encaminhados incorretamente, tornando o suporte interno mais **rápido, organizado e eficiente**.
+Reduzir chamados simples, repetitivos ou direcionados incorretamente, tornando o suporte interno mais **rápido, organizado e eficiente**.
 
-### Fluxo da solução
+---
 
-```text
-Usuário
-   ↓
-HelpBot
-   ↓
-Identificação e classificação
-   ↓
-┌──────────────────┬─────────────────────┐
-│ Problema simples │ Problema complexo   │
-│       ↓          │         ↓           │
-│ Orientação       │ Registro do chamado │
-│ automática       │         ↓           │
-└──────────────────┴──→ Equipe responsável
+## 🏗️ Arquitetura
+
+A arquitetura do HelpBot é dividida em **Frontend, Backend, Inteligência Artificial e Banco de Dados**.
+
+```mermaid
+flowchart TB
+    subgraph Chat["Frontend — Chat (TypeScript)"]
+        ChatUI["Chat Widget UI"]
+        ChatComponents["Componentes"]
+        ChatClient["Cliente HTTP/WebSocket"]
+        ChatUI --> ChatComponents --> ChatClient
+    end
+
+    subgraph Admin["Frontend — ADM (React)"]
+        AdmUI["Painel Administrativo"]
+        AdmDashboard["Dashboard de Métricas"]
+        AdmChamados["Gestão de Chamados"]
+        AdmUsuarios["Gestão de Usuários"]
+        AdmUI --> AdmDashboard
+        AdmUI --> AdmChamados
+        AdmUI --> AdmUsuarios
+    end
+
+    subgraph Backend["Backend (Go)"]
+        API["API Gateway / REST"]
+        Auth["Autenticação"]
+        Tickets["Serviço de Chamados"]
+        Routing["Serviço de Encaminhamento"]
+        Orchestrator["Orquestrador de IA"]
+        Metrics["Métricas"]
+    end
+
+    subgraph IA["Camada de IA — LLMs Locais"]
+        KEV["KEV — Classificador"]
+        Qwen["Qwen — Geração de Respostas"]
+        Ollama["Ollama"]
+    end
+
+    DB[("PostgreSQL")]
+
+    ChatClient -->|HTTP/WebSocket| API
+    AdmDashboard --> API
+    AdmChamados --> API
+    AdmUsuarios --> API
+
+    API --> Auth
+    API --> Tickets
+    API --> Orchestrator
+    API --> Metrics
+
+    Tickets --> Routing
+    Tickets --> DB
+    Auth --> DB
+    Metrics --> DB
+
+    Orchestrator --> KEV
+    Orchestrator --> Qwen
+    KEV --> Ollama
+    Qwen --> Ollama
+
+    Routing --> Tickets
 ```
 
-### Exemplos
-
-* 🔑 **Dúvida sobre senha** → orientação automática
-* 🌐 **Problema de conexão** → diagnóstico e instruções básicas
-* 🖥️ **Computador não liga** → encaminhamento para suporte técnico
-* 📄 **Solicitação de outro setor** → direcionamento para a equipe responsável
+O arquivo-fonte da arquitetura está disponível em [`arquitetura.puml`](./arquitetura.puml).
 
 ---
 
 ## 🧠 Inteligência Artificial
 
-A IA será utilizada para **interpretar as solicitações, identificar o contexto, classificar os chamados e auxiliar na definição do encaminhamento adequado**.
+A camada de IA utiliza modelos locais para interpretar e responder às solicitações:
 
-O projeto também contempla o desenvolvimento de um **software de atendimento**, responsável pela interação com o usuário, gerenciamento dos chamados e integração com os recursos de IA.
+* **KEV** — classificação de intenção;
+* **Qwen** — geração de respostas;
+* **Ollama** — execução local dos modelos;
+* **Orquestrador de IA** — integração da IA com o sistema.
 
-> A arquitetura e as tecnologias serão definidas ao longo do desenvolvimento, de acordo com os requisitos do projeto.
+---
+
+## 🖥️ Sistema
+
+### Chat
+
+Interface destinada aos funcionários para realizar solicitações, receber orientações e acompanhar chamados.
+
+### Painel Administrativo
+
+Interface destinada ao gerenciamento de **chamados, usuários, encaminhamentos e métricas**.
 
 ---
 
 ## 🛠️ Tecnologias
 
-Tecnologias em avaliação:
+| Categoria               | Tecnologia          |
+| ----------------------- | ------------------- |
+| Backend                 | Go                  |
+| Chat                    | TypeScript          |
+| Painel administrativo   | React               |
+| Banco de dados          | PostgreSQL          |
+| Inteligência Artificial | KEV + Qwen + Ollama |
+| Comunicação             | REST + WebSocket    |
+| Arquitetura             | PlantUML + Mermaid  |
+| Versionamento           | Git + GitHub        |
 
-* **Frontend:** HTML, CSS, JavaScript e/ou framework web
-* **Backend:** Python, Java ou tecnologia equivalente
-* **IA:** modelo de linguagem / API de Inteligência Artificial
-* **Banco de dados:** PostgreSQL, MySQL ou similar
-* **Versionamento:** Git e GitHub
+---
+
+## 🎨 Protótipo
+
+O protótipo das interfaces está sendo desenvolvido no **Figma**.
+
+[![Figma](https://img.shields.io/badge/Prot%C3%B3tipo-Figma-F24E1E?logo=figma\&logoColor=white)](https://www.figma.com/proto/BQI0OtXmf1BAuWfHsxSYw0/modelo-PI-celular?node-id=11-16&p=f&t=uYYT4EW0nWHuNZm5-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1)
 
 ---
 
 ## 👥 Equipe
 
-| Integrante        | Função    |
-| ----------------- | --------- |
-| Yuri Duarte       | A definir |
-| Karen Marroco     | A definir |
-| Miguel Giovannini | A definir |
-| Cleberson Felex   | A definir |
-| Matheus Basso     | A definir |
+| Integrante            | Função    |
+| --------------------- | --------- |
+| **Yuri Duarte**       | A definir |
+| **Karen Marroco**     | A definir |
+| **Miguel Giovannini** | A definir |
+| **Cleberson Felex**   | A definir |
+| **Matheus Basso**     | A definir |
 
 ---
 
@@ -76,12 +157,19 @@ Tecnologias em avaliação:
 
 🟡 **Em desenvolvimento**
 
-Atualmente, o projeto encontra-se na etapa de **planejamento e definição da solução**.
-
-As próximas etapas envolvem levantamento de requisitos, definição da arquitetura, prototipação e desenvolvimento do sistema.
+* [x] Planejamento inicial
+* [x] Definição da arquitetura
+* [x] Prototipação inicial
+* [ ] Validação dos requisitos
+* [ ] Implementação do backend
+* [ ] Implementação das interfaces
+* [ ] Integração com IA
+* [ ] Sistema de chamados
+* [ ] Testes e validação
+* [ ] Documentação final
 
 ---
 
 ## 🎓 Projeto Integrador
 
-Projeto acadêmico desenvolvido para a disciplina de **Projeto Integrador**, com foco na aplicação prática de conceitos de **Engenharia de Software, desenvolvimento de sistemas e Inteligência Artificial**.
+Projeto acadêmico desenvolvido para a disciplina de **Projeto Integrador**, aplicando conceitos de **Engenharia de Software, desenvolvimento de sistemas e Inteligência Artificial**.
