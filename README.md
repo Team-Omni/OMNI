@@ -1,6 +1,6 @@
 # 🤖 Omni
 
-[![Status]([https://img.shields.io/badge/status-em%20desenvolvimento-yellow)](https://github.com/](https://github.com/yuridkerber/PROJETO-INTEGRADOR-1SEM.-Equipe-HelpBot#-status))
+[![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)](#-status)
 
 > **Atendimento inteligente e triagem automatizada de chamados de TI.**
 
