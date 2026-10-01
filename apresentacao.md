@@ -51,27 +51,6 @@ A estratégia de IA prioriza modelos locais executados pelo Ollama. Essa decisã
 9. O usuário acompanha o status pelo chat.
 10. Métricas de atendimento, latência, modelo utilizado e encaminhamentos são registradas.
 
-## Organização conceitual
-
-```text
-OMNI/
-├── README.md
-│   └── Visão geral, objetivos, tecnologias, status e arquitetura
-└── diagramas/
-    ├── arquitetura.md
-    │   └── Arquitetura principal em Mermaid
-    ├── arquitetura.puml
-    │   └── Fonte PlantUML da arquitetura principal
-    ├── arquitetura_llms_baratas.md
-    │   └── Estratégia de modelos locais e APIs de fallback
-    ├── arquitetura_llms_baratas.puml
-    │   └── Fonte PlantUML da arquitetura de LLMs
-    ├── usecase.md
-    │   └── Casos de uso em Mermaid
-    └── usecase.puml
-        └── Fonte PlantUML dos casos de uso
-```
-
 ## Diagrama de arquitetura
 
 ```mermaid
