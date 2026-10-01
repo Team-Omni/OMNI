@@ -1,4 +1,4 @@
-# 🤖 HelpBot
+# 🤖 Omni
 
 [![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)](https://github.com/)
 
@@ -8,7 +8,7 @@
 
 ## 📌 Sobre
 
-O **HelpBot** é uma solução de atendimento interno baseada em **Inteligência Artificial**, desenvolvida para auxiliar funcionários na resolução e direcionamento de solicitações de TI.
+O **Omni** é uma solução de atendimento interno baseada em **Inteligência Artificial**, desenvolvida para auxiliar funcionários na resolução e direcionamento de solicitações de TI.
 
 A solução automatiza o primeiro atendimento, orientando o usuário em problemas simples e, quando necessário, coletando informações, classificando a solicitação e encaminhando o chamado para a equipe responsável.
 
@@ -22,7 +22,7 @@ Reduzir chamados simples, repetitivos ou direcionados incorretamente, tornando o
 
 ## 🏗️ Arquitetura
 
-A arquitetura do HelpBot é dividida em **Frontend, Backend, Inteligência Artificial e Banco de Dados**.
+A arquitetura do Omni é dividida em **Frontend, Backend, Inteligência Artificial e Banco de Dados**.
 
 ```mermaid
 flowchart TB
