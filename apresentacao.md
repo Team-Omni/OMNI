@@ -1,4 +1,4 @@
-# Apresentação Executiva — OMNI
+# Apresentação — OMNI
 
 ## O que é
 
@@ -283,37 +283,3 @@ O projeto está marcado como **em desenvolvimento**.
 [ ] Testes e validação
 [ ] Documentação final
 ```
-
-## Avaliação executiva
-
-### Pontos fortes
-
-- Problema de negócio claro e relevante.
-- Separação adequada entre chat do usuário e painel administrativo.
-- Arquitetura modular com autenticação, chamados, encaminhamento, métricas e IA.
-- Prioridade para modelos locais, favorecendo privacidade e controle de custos.
-- Fallback cloud para aumentar resiliência e qualidade.
-- Diagramas versionados junto da documentação.
-
-### Riscos e decisões pendentes
-
-- Backend, frontend, banco e integração de IA ainda não foram implementados.
-- O KEV é citado como classificador, mas sua origem, arquitetura e modelo específico ainda não estão documentados.
-- Ainda precisam ser definidos os contratos da API, o esquema do PostgreSQL e a estratégia de autenticação.
-- A escolha entre RabbitMQ e Kafka permanece em aberto.
-- Os critérios para selecionar modelos locais ou cloud precisam ser formalizados.
-- É necessário definir políticas para dados sensíveis, logs, retenção de conversas e segurança.
-- Métricas como precisão da classificação, taxa de resolução automática, latência e custo precisam ser especificadas.
-
-## Próximos passos recomendados
-
-1. Validar requisitos com usuários, atendentes e administradores.
-2. Definir os contratos da API e o modelo de dados do PostgreSQL.
-3. Criar o esqueleto do backend em Go.
-4. Implementar autenticação e autorização.
-5. Implementar o ciclo de vida dos chamados.
-6. Criar o frontend de chat e o painel React.
-7. Integrar o Ollama e o primeiro modelo local.
-8. Definir critérios objetivos de fallback para APIs cloud.
-9. Criar testes unitários, de integração e de avaliação da IA.
-10. Implantar métricas de qualidade, latência, custo e encaminhamento.
